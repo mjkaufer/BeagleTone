@@ -20,7 +20,7 @@ function loop() {
     try{
         var p1Val = b.analogRead(pot1);
         var p2Val = b.analogRead(pot2);
-        socket.emit('potentiometer',{pot1: pot1, pot2: pot2})
+        socket.emit('potentiometer',{pot1: p1Val, pot2: p2Val})
         console.log(p1Val, p2Val)
     } catch(e){}
 
